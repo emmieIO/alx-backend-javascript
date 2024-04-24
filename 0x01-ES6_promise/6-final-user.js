@@ -6,6 +6,14 @@ export default function handleProfileSignup(firstName, lastName, filename) {
     signUpUser(firstName, lastName),
     uploadPhoto(filename)])
     .then((values) => {
-      console.log(values);
+      const result = [];
+      values.forEach((element) => {
+        if (element.status === 'fulfilled') {
+          result.push({ status: element.status, value: element.value });
+        } else {
+          result.push({ status: element.status, value: `${element.reason}` });
+        }
+      });
+      return result;
     });
 }
