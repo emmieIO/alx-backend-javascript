@@ -32,7 +32,7 @@ export default class HolbertonCourse {
 
   get students() {
     // Return a copy of the students array to prevent modification from outside
-    return this._students.slice();
+    return this._students;
   }
 
   // Setters
@@ -50,9 +50,4 @@ export default class HolbertonCourse {
     this._length = newLength;
   }
 
-  // Prevent modification of the original students array
-  set students(newStudents) {
-  
-    throw new TypeError('Cannot modify students array directly');
-  }
 }
