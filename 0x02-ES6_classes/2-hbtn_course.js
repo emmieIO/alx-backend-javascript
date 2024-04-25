@@ -49,4 +49,10 @@ export default class HolbertonCourse {
     }
     this._length = newLength;
   }
+
+  // Prevent modification of the original students array
+  set students(newStudents) {
+  
+    throw new TypeError('Cannot modify students array directly');
+  }
 }
