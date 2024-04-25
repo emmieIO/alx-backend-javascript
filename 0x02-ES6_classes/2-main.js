@@ -1,8 +1,10 @@
-import HolbertonCourse from "./2-hbtn_course.js";
+/* eslint-disable  no-unused-vars */
 
-const c1 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"]);
+import HolbertonCourse from './2-hbtn_course';
+
+const c1 = new HolbertonCourse('ES6', 1, ['Bob', 'Jane']);
 console.log(c1.name);
-c1.name = "Python 101";
+c1.name = 'Python 101';
 console.log(c1);
 
 try {
@@ -12,7 +14,7 @@ try {
 }
 
 try {
-  const c2 = new HolbertonCourse("ES6", "1", ["Bob", "Jane"]);
+  const c2 = new HolbertonCourse('ES6', '1', ['Bob', 'Jane']);
 } catch (err) {
   console.log(err);
 }
