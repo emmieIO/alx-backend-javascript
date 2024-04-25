@@ -49,5 +49,4 @@ export default class HolbertonCourse {
     }
     this._length = newLength;
   }
-
 }
